@@ -1,0 +1,150 @@
+
+
+--  Administator
+
+CREATE TABLE Administator
+(
+ Admin_num    int NOT NULL ,
+ Admin_ID     int NOT NULL ,
+ Admin_FName  varchar(45) NOT NULL ,
+ Admin_LName  varchar(45) NOT NULL ,
+ Admin_Inital varchar(45) NOT NULL ,
+ Admin_Email  varchar(45) NOT NULL ,
+ Admin_Login   NOT NULL ,
+PRIMARY KEY (Admin_num)
+);
+
+
+--  Book
+
+CREATE TABLE Book
+(
+ Book_ID     int NOT NULL ,
+ School_Code varchar(45) NOT NULL ,
+ Course_Code varchar(45) NOT NULL ,
+PRIMARY KEY (Book_ID)
+);
+
+
+
+
+--  Course
+
+CREATE TABLE Course
+(
+ Course_Code    varchar(45) NOT NULL ,
+ Dept_code      varchar(45) NOT NULL ,
+ Course_TTL      varchar(45) NOT NULL ,
+ Course_CRD      int NOT NULL ,
+ Course_Descript varchar(200) NOT NULL ,
+PRIMARY KEY (Course_Code)
+);
+
+
+
+
+
+
+--  Class
+
+CREATE TABLE Class
+(
+ Class_Code  varchar(45) NOT NULL ,
+ Class_Time  varchar(45) NOT NULL ,
+ Class_Name  varchar(45) NOT NULL ,
+ Class_Level varchar(45) NOT NULL ,
+ Course_Code varchar(45) NOT NULL ,
+PRIMARY KEY (Class_Code)
+);
+
+
+
+
+--Professor
+
+CREATE TABLE Professor
+(
+ Prof_num    varchar(45) NOT NULL ,
+ Prof_ID      int NOT NULL ,
+ Prof_Fname   varchar(45) NOT NULL ,
+ Prof_Lname   varchar(45) NOT NULL ,
+ Prof_initial varchar(45) NOT NULL ,
+ Prof_Email   varchar(45) NOT NULL ,
+PRIMARY KEY (Prof_num)
+);
+
+
+
+
+
+
+-- Department
+
+CREATE TABLE Department
+(
+ DeptCode    varchar(45) NOT NULL ,
+ School_code varchar(45) NOT NULL ,
+ Dept_Name   varchar(45) NOT NULL ,
+ Prof_FName  varchar(45) NOT NULL ,
+ Prof_LName  varchar(45) NOT NULL ,
+PRIMARY KEY (DeptCode)
+);
+
+
+
+-- Student
+
+CREATE TABLE Student
+(
+ Student_NUM    int NOT NULL ,
+ Student_FName  varchar(45) NOT NULL ,
+ Student_LName  varchar(45) NOT NULL ,
+ Student_Inital varchar(45) NOT NULL ,
+ Student_Login  varchar(45) NOT NULL ,
+ Student_Email  varchar(45) NOT NULL ,
+PRIMARY KEY (Student_NUM)
+);
+
+
+
+
+
+
+-- School
+
+CREATE TABLE School
+(
+ School_code  varchar(45) NOT NULL ,
+ School_Zip   int NOT NULL ,
+ School_State varchar(45) NOT NULL ,
+ School_name  varchar(45) NOT NULL ,
+ School_city  varchar(45) NOT NULL ,
+PRIMARY KEY (School_code)
+);
+
+
+
+-- Subscription
+
+CREATE TABLE Subscription
+(
+ SubScripton_type varchar(45) NOT NULL ,
+ Student_sub      varchar(45) NOT NULL ,
+ Professor_sub    varchar(45) NOT NULL ,
+PRIMARY KEY (SubScripton_type)
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
