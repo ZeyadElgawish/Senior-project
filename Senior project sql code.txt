@@ -59,25 +59,6 @@ PRIMARY KEY (Class_Code)
 
 
 
-
---Professor
-
-CREATE TABLE Professor
-(
- Prof_num    varchar(45) NOT NULL ,
- Prof_ID      int NOT NULL ,
- Prof_Fname   varchar(45) NOT NULL ,
- Prof_Lname   varchar(45) NOT NULL ,
- Prof_initial varchar(45) NOT NULL ,
- Prof_Email   varchar(45) NOT NULL ,
-PRIMARY KEY (Prof_num)
-);
-
-
-
-
-
-
 -- Department
 
 CREATE TABLE Department
